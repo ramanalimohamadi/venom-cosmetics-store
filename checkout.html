@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>پرداخت | VENOM</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./fontawesome-free-7.3.1-web/css/all.min.css">
+
+</head>
+
+<body>
+
+<header id="header">
+
+    <a href="./index.html" class="logo">
+
+        <img src="./img/photo_2026-07-16_03-21-29.jpg" class="logo-img" alt="logo">
+
+    </a>
+
+    <button class="menu-btn">
+
+        <i class="fa-solid fa-bars"></i>
+
+    </button>
+
+    <nav class="nav-items">
+
+        <ul class="items">
+
+            <li><a href="./index.html">خانه</a></li>
+
+            <li><a href="./products.html">فروشگاه</a></li>
+
+            <li><a href="./about.html">درباره ما</a></li>
+
+            <li><a href="./contact.html">تماس با ما</a></li>
+
+        </ul>
+
+    </nav>
+
+    <div class="header-right">
+
+        <h1 class="brand">VENOM</h1>
+
+    </div>
+
+</header>
+
+
+
+<section class="checkout">
+
+    <div class="checkout-box">
+
+        <h2>
+            <i class="fa-solid fa-credit-card"></i>
+            پرداخت سفارش
+        </h2>
+
+        <p class="checkout-text">
+            💖 فقط یک قدم تا دریافت محصولات زیبایی ونوم!
+        </p>
+
+        <form id="checkout-form">
+
+            <div class="input-box">
+
+                <label>نام و نام خانوادگی</label>
+
+                <input type="text" id="fullname" placeholder="نام خود را وارد کنید">
+
+            </div>
+
+            <div class="input-box">
+
+                <label>شماره موبایل</label>
+
+                <input type="tel" id="phone" placeholder="09xxxxxxxxx">
+
+            </div>
+
+            <div class="input-box">
+
+                <label>استان</label>
+
+                <input type="text" id="province" placeholder="مثلاً تهران">
+
+            </div>
+
+            <div class="input-box">
+
+                <label>شهر</label>
+
+                <input type="text" id="city" placeholder="مثلاً تهران">
+
+            </div>
+
+            <div class="input-box">
+
+                <label>آدرس کامل</label>
+
+                <textarea id="address" rows="4" placeholder="آدرس کامل خود را وارد کنید"></textarea>
+
+            </div>
+
+            <div class="payment-method">
+
+                <h3>روش پرداخت</h3>
+
+                <label>
+
+                    <input type="radio" name="payment" checked>
+
+                    پرداخت آنلاین
+
+                </label>
+
+                <label>
+
+                    <input type="radio" name="payment">
+
+                    پرداخت در محل
+
+                </label>
+
+            </div>
+
+            <div class="checkout-total">
+
+                <h3>
+
+                    جمع کل:
+
+                    <span id="checkout-total-price">
+                        ۰ تومان
+                    </span>
+
+                </h3>
+
+            </div>
+
+            <button type="submit" class="checkout-btn">
+
+                <i class="fa-solid fa-check"></i>
+
+                ثبت سفارش
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<script src="./main.js"></script>
+<script src="./checkout.js"></script>
+
+<div id="checkout-toast" class="checkout-toast">
+
+    <i class="fa-solid fa-circle-exclamation"></i>
+
+    <span id="checkout-toast-message"></span>
+
+</div>
+
+</body>
+</html>

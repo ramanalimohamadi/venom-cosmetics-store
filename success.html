@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fa-ir" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ثبت موفق سفارش | ونوم</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./fontawesome-free-7.3.1-web/css/all.min.css">
+
+</head>
+
+<body>
+
+    <section class="success-page">
+
+    <div class="success-box">
+
+        <div class="success-icon">
+            <i class="fa-solid fa-check"></i>
+        </div>
+
+
+        <h1 id="success-message"></h1>
+
+
+        <p>
+            ممنون که فروشگاه ونوم را انتخاب کردید.
+            سفارش شما با موفقیت ثبت شد و در حال آماده‌سازی است.
+        </p>
+
+
+        <div class="order-number">
+            شماره سفارش:
+            <span id="order-number"></span>
+        </div>
+
+        <div class="order-products">
+
+    <h3>محصولات سفارش:</h3>
+
+    <div id="order-items"></div>
+
+</div>
+
+
+        <a href="index.html" class="success-btn">
+            بازگشت به فروشگاه
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<script>
+
+const name = localStorage.getItem("customerName");
+
+const order = localStorage.getItem("orderNumber");
+
+
+if(name){
+
+    document.getElementById("success-message").innerHTML =
+    `${name} عزیز، سفارش شما با موفقیت ثبت شد 🌸`;
+
+}else{
+
+    document.getElementById("success-message").innerHTML =
+    "سفارش شما ثبت شد 🌸";
+
+}
+
+
+if(order){
+
+    document.getElementById("order-number").innerHTML = order;
+
+}
+
+const orderItems = JSON.parse(localStorage.getItem("lastOrder")) || [];
+
+const itemsBox = document.getElementById("order-items");
+
+
+orderItems.forEach(item => {
+
+    itemsBox.innerHTML += `
+    
+    <p>
+    🛍️ ${item.name} - ${item.price.toLocaleString()} تومان
+    </p>
+
+    `;
+
+});
+
+</script>
+
+</body>
+</html>
