@@ -1,0 +1,4551 @@
+*{
+    padding: 0px;
+    margin: 0px;
+
+}
+@font-face {
+    font-family: "Vazirmatn";
+    src: url("./fonts/Vazirmatn-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Estedad";
+    src: url("./fonts/Estedad-Regular.ttf") format("truetype");
+}
+
+
+body {
+    font-family: "Vazirmatn", sans-serif;
+   background-color: #FFF0F5;
+   color: #333;
+   
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#header{
+    background:#fff;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+     background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 20px;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+/* لوگو */
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+}
+
+.logo-img{
+    width:100px;
+    object-fit: contain;
+    border-radius: 20px;
+    border: 2px solid rgba(61, 65, 63, 0.123) ;
+}
+
+.brand{
+    font-family:"Estedad";
+    font-size:30px;
+    color:#C98A6B;
+    letter-spacing:4px;
+}
+
+/* منو */
+.items{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+.items a{
+    font-size:17px;
+    font-weight:500;
+     text-decoration: none;
+    color: #7A4E3A;
+    background-color: #F8D7E6;
+    padding: 10px 18px;
+    border-radius: 30px;
+    transition: 0.4s;
+}
+
+.items a:hover{
+     background-color: #E7A7C7;
+    color: white;
+    transform: translateY(-2px);
+}
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:20px;
+    padding:70px;
+    background:linear-gradient(135deg,#FFF5F8,#FFDCE8);
+    border-radius:35px;
+    overflow:hidden;
+    position:relative;
+}
+
+/* هاله پشت عکس */
+.hero::after{
+    content:"";
+    position:absolute;
+    left:-120px;
+    top:50%;
+    transform:translateY(-50%);
+    width:500px;
+    height:500px;
+    background:#F9C8DA;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:.6;
+}
+
+.hero-text{
+    width:50%;
+    position:relative;
+    z-index:2;
+}
+
+.tag{
+    display:inline-block;
+    background:#FFE8F1;
+    color:#C98A6B;
+    padding:10px 20px;
+    border-radius:30px;
+    font-size:15px;
+    margin-bottom:25px;
+}
+
+.hero-text h1{
+    font-family:"Estedad";
+    font-size:70px;
+    line-height:95px;
+    color:#8E3D63;
+}
+
+.hero-text p{
+    font-size:22px;
+    color:#555;
+    margin:30px 0;
+    line-height:40px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+}
+
+/* دکمه ها */
+
+.btn1,
+.btn2{
+
+    position:relative;
+    overflow:hidden;
+
+    padding:15px 35px;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    font-size:17px;
+    font-family:"Vazirmatn";
+
+    transition:.4s;
+
+    z-index:1;
+}
+
+.btn{
+    background: linear-gradient(135deg,#ff7eb3,#ff4f9a);
+    color: white;
+    padding: 14px 35px;
+    border-radius: 30px;
+    border: none;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 8px 20px rgba(255,79,154,0.3);
+    text-decoration: none;
+}
+
+.btn:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(255,79,154,0.5);
+}
+/* عکس */
+
+.hero-img{
+
+    width:45%;
+    display:flex;
+    justify-content:center;
+    position:relative;
+    z-index:2;
+
+}
+
+.hero-img img{
+
+    width:520px;
+    max-width:100%;
+    transition:.5s;
+
+}
+
+.hero-img img:hover{
+
+    transform:scale(1.05);
+
+}
+.products{
+    width: 100%;
+    padding: 100px 8%;
+    background: #fff8fb;
+    text-align: center;
+}
+
+.products h2{
+    font-size: 42px;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.products > p{
+    color: #777;
+    font-size: 18px;
+    margin-bottom: 60px;
+}
+
+.cards{
+   display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:30px;
+    width:100%;
+}
+
+.card{
+    width: 260px;
+    height: 480px;
+    background-color: white;
+    border-radius: 25px;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,.08);
+    transition: .4s;
+    position: relative;
+}
+
+.card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 25px 50px rgba(255,105,180,.35);
+}
+
+.card img{
+      width: 100%;
+    height: 230px;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+    transition: .5s;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,.12));
+}
+
+.card:hover img{
+    transform: scale(1.08);
+}
+
+.card h3{
+    margin-top: 25px;
+    font-size: 28px;
+    color: #222;
+}
+
+.card p{
+    color: #777;
+    line-height: 30px;
+    padding: 15px 25px;
+}
+
+.card a{
+    display: inline-block;
+    margin: 20px 0 30px;
+    padding: 12px 28px;
+    background: linear-gradient(135deg,#ff5fa2,#ff8ec5);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.card a:hover{
+    transform: scale(1.08);
+    background: linear-gradient(135deg,#ff3b8d,#ff6db0);
+}
+.card span{
+    display: block;
+    margin: 15px 0;
+    color: #d86b91;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* دکمه خرید */
+.card button{
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    background-color: #e88ca8;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.card button:hover{
+    background-color: #d45b82;
+}
+.card button:active{
+    transform: scale(.95);
+}
+.why-venom{
+    padding:100px 8%;
+    text-align:center;
+    background:#fff0f5;
+}
+
+
+.why-venom h2{
+    font-size:42px;
+    color:#8E3D63;
+    margin-bottom:20px;
+}
+
+
+.why-text{
+    color:#666;
+    font-size:18px;
+    max-width:700px;
+    margin:auto;
+    line-height:35px;
+}
+
+
+.why-cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-top:60px;
+}
+
+
+.why-card{
+    width:230px;
+    background:white;
+    padding:35px 20px;
+    border-radius:30px;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+
+.why-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 20px 40px rgba(255,105,180,.25);
+}
+
+
+.why-card i{
+    font-size:40px;
+    color:#e88ca8;
+    margin-bottom:20px;
+}
+
+
+.why-card h3{
+    font-size:22px;
+    color:#333;
+    margin-bottom:15px;
+}
+
+
+.why-card p{
+    color:#777;
+    line-height:30px;
+    font-size:15px;
+}
+.footer{
+    background:#1b1218;
+    color:white;
+    padding:70px 8% 20px;
+}
+
+
+.footer-content{
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+
+.footer-brand{
+    width:300px;
+}
+
+
+.footer-brand h2{
+    font-family:"Estedad";
+    font-size:45px;
+    letter-spacing:5px;
+    color:#e88ca8;
+    margin-bottom:20px;
+}
+
+
+.footer-brand p{
+    color:#ccc;
+    line-height:35px;
+}
+
+
+.footer h3{
+    color:#f3b6cc;
+    margin-bottom:25px;
+    font-size:22px;
+}
+
+
+.footer-links{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+
+.footer-links a{
+    color:#ddd;
+    text-decoration:none;
+    transition:.3s;
+}
+
+
+.footer-links a:hover{
+    color:#e88ca8;
+    transform:translateX(-5px);
+}
+
+
+.footer-contact p{
+    color:#ddd;
+    margin-bottom:15px;
+}
+
+
+.footer-contact i{
+    color:#e88ca8;
+    margin-left:10px;
+}
+
+
+.footer-social a{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:45px;
+    height:45px;
+    margin-left:10px;
+    border-radius:50%;
+    background:#30212a;
+    color:#e88ca8;
+    font-size:22px;
+    transition:.3s;
+}
+
+
+.footer-social a:hover{
+    background:#e88ca8;
+    color:white;
+    transform:translateY(-5px);
+}
+
+
+.footer-bottom{
+    margin-top:50px;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.1);
+    text-align:center;
+    color:#aaa;
+}
+.reviews{
+    padding:100px 8%;
+    background:#fff8fb;
+    text-align:center;
+}
+
+
+.reviews h2{
+    font-size:42px;
+    color:#8E3D63;
+    margin-bottom:15px;
+}
+
+
+.reviews-text{
+    color:#777;
+    font-size:18px;
+    margin-bottom:60px;
+}
+
+
+.review-cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+
+.review-card{
+    width:280px;
+    background:white;
+    padding:30px;
+    border-radius:30px;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+
+.review-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(255,105,180,.25);
+}
+
+
+.stars{
+    color:#f5b400;
+    font-size:25px;
+    margin-bottom:20px;
+}
+
+
+.review-card p{
+    color:#666;
+    line-height:30px;
+}
+
+
+.review-card h3{
+    margin-top:25px;
+    color:#8E3D63;
+}
+.menu-btn{
+    display:none;
+    background:none;
+    border:none;
+    font-size:30px;
+    color:#C98A6B;
+    cursor:pointer;
+}
+
+
+/* Luxury Animation */
+
+.hero{
+    animation: heroShow 1s ease;
+}
+
+
+@keyframes heroShow{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/* کارت محصولات */
+
+.card{
+    animation: cardShow .8s ease forwards;
+    opacity:0;
+}
+
+
+.card:nth-child(1){
+    animation-delay:.2s;
+}
+
+.card:nth-child(2){
+    animation-delay:.4s;
+}
+
+.card:nth-child(3){
+    animation-delay:.6s;
+}
+
+.card:nth-child(4){
+    animation-delay:.8s;
+}
+
+
+@keyframes cardShow{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/* بخش های پایین */
+
+.why-venom,
+.reviews,
+.footer{
+
+    animation: fadeSoft 1.2s ease;
+
+}
+
+
+@keyframes fadeSoft{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+.products-page{
+
+    padding:100px 8%;
+    text-align:center;
+    background:#fff8fb;
+
+}
+
+
+.products-page h1{
+
+    font-size:45px;
+    color:#8E3D63;
+    margin-bottom:20px;
+
+}
+
+
+.products-page > p{
+
+    color:#777;
+    font-size:18px;
+    margin-bottom:60px;
+
+}
+
+
+
+.shop-cards{
+
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+
+}
+
+
+
+.shop-card{
+
+    width:260px;
+    background:white;
+    padding:25px;
+    border-radius:30px;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.4s;
+
+}
+
+
+.shop-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+.shop-card img{
+
+    width:100%;
+    height:230px;
+    object-fit:contain;
+
+}
+
+
+
+.shop-card h3{
+
+    font-size:26px;
+    margin:20px 0;
+    color:#333;
+
+}
+
+
+
+.shop-card p{
+
+    color:#777;
+    line-height:30px;
+
+}
+
+
+
+.shop-card span{
+
+    display:block;
+    color:#d86b91;
+    font-size:18px;
+    font-weight:bold;
+    margin:20px;
+
+}
+
+
+
+.shop-card button{
+
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:30px;
+    background:#e88ca8;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+
+}
+
+
+.shop-card button:hover{
+
+    background:#d45b82;
+
+}
+.about-page{
+
+    padding:100px 8%;
+    text-align:center;
+    background:#fff8fb;
+
+}
+
+.about-page h1{
+
+    font-size:45px;
+    color:#8E3D63;
+    margin-bottom:30px;
+
+}
+
+.about-intro{
+
+    max-width:800px;
+    margin:auto;
+    color:#666;
+    line-height:40px;
+    font-size:19px;
+
+}
+
+.about-boxes{
+
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-top:70px;
+
+}
+
+.about-box{
+
+    width:280px;
+    background:white;
+    padding:35px;
+    border-radius:30px;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.4s;
+
+}
+
+.about-box:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.about-box i{
+
+    font-size:45px;
+    color:#e88ca8;
+    margin-bottom:20px;
+
+}
+
+.about-box h3{
+
+    margin-bottom:15px;
+    color:#333;
+
+}
+
+.about-box p{
+
+    color:#777;
+    line-height:30px;
+
+}
+/* سمت راست هدر */
+
+.header-right{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+/* سرچ */
+
+.search-box{
+
+    display:flex;
+    align-items:center;
+
+    width:300px;
+    height:48px;
+
+    padding:0 18px;
+
+    background:#fff;
+
+    border:2px solid #f3d3df;
+
+    border-radius:50px;
+
+    transition:.35s;
+
+}
+
+.search-box:hover,
+.search-box:focus-within{
+
+    border-color:#ff5fa2;
+
+    box-shadow:0 10px 25px rgba(255,95,162,.18);
+
+}
+
+.search-box i{
+
+    color:#c98a6b;
+
+    margin-left:12px;
+
+    font-size:17px;
+
+}
+
+.search-box input{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    font-family:"Vazirmatn";
+
+    font-size:15px;
+
+}
+/* ===== Shop Page ===== */
+
+.shop{
+    padding:60px 20px;
+    text-align:center;
+}
+
+
+.shop h1{
+    font-size:40px;
+    color:#d14b8f;
+    margin-bottom:15px;
+}
+
+
+.shop p{
+    font-size:18px;
+    color:#777;
+    margin-bottom:50px;
+}
+
+
+/* کارت‌های محصولات */
+.shop-cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+
+/* خود کارت */
+.shop .card{
+     width:250px;
+    background:#fff;
+    padding:15px;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+
+.shop .card:hover{
+    transform:translateY(-10px);
+}
+
+
+/* عکس محصول */
+.shop .card img{
+     width:100%;
+    height:170px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+
+/* عنوان محصول */
+.shop .card h3{
+    font-size:25px;
+    margin:20px 0 10px;
+}
+
+
+/* قیمت */
+.shop .card span{
+    display:block;
+    color:#d14b8f;
+    font-size:20px;
+    font-weight:bold;
+    margin:15px;
+}
+
+
+/* دکمه */
+.shop .card button{
+    background:#d14b8f;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    font-family:inherit;
+    transition:0.3s;
+}
+
+
+.shop .card button:hover{
+    background:#a92e6c;
+}
+
+
+
+.cart{
+    position: relative;
+    color:#d14b8f;
+    font-size:25px;
+    cursor:pointer;
+    text-decoration:none;
+    margin-right:20px;
+    transition:0.3s;
+}
+
+.cart:hover{
+    transform:scale(1.1);
+    color:#b13a75;
+}
+
+/* شمارنده سبد */
+#cart-count{
+    position:absolute;
+    top:-12px;
+    right:-12px;
+    background:#d14b8f;
+    color:white;
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:12px;
+    font-weight:bold;
+}
+
+
+/* حالت سبد */
+.cart-icon{
+    position:relative;
+    transition:.3s;
+}
+
+
+/* تکان خوردن سبد */
+.cart-shake{
+    animation:shake .5s;
+}
+
+
+@keyframes shake{
+
+    0%{
+        transform:rotate(0);
+    }
+
+    25%{
+        transform:rotate(-15deg);
+    }
+
+    50%{
+        transform:rotate(15deg);
+    }
+
+    75%{
+        transform:rotate(-10deg);
+    }
+
+    100%{
+        transform:rotate(0);
+    }
+
+}
+
+
+
+/* نوتیفیکیشن */
+
+.notification{
+
+    position:fixed;
+    top:30px;
+    right:30px;
+
+    background:white;
+    color:#555;
+
+    padding:15px 25px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+    transform:translateX(400px);
+
+    transition:.5s;
+
+    z-index:9999;
+
+}
+
+
+.notification.show{
+
+    transform:translateX(0);
+
+}
+
+
+.notification i{
+
+    color:#d14b8f;
+    margin-left:10px;
+
+}
+
+
+
+
+/* عکس پرنده */
+
+.fly-img{
+
+    position:absolute;
+
+    width:80px;
+
+    height:80px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    z-index:9999;
+
+    transition:1s cubic-bezier(.55,-0.5,.2,1.5);
+
+}
+.toast{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+    z-index: 9999;
+
+    /* مخفی */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-30px);
+    transition: .4s;
+}
+
+
+.toast.show{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+.toast-content h3{
+    margin: 0;
+    font-size: 18px;
+}
+
+
+.toast-content p{
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+.toast h3{
+    margin:0;
+    padding:0;
+}
+/* =========================
+   Cart Design
+========================= */
+
+
+.cart-container{
+    width:90%;
+    max-width:900px;
+    margin:60px auto;
+}
+
+
+
+.cart-item{
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    background:white;
+
+    padding:25px;
+
+    margin-bottom:20px;
+
+    border-radius:25px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+
+
+.cart-item:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+}
+
+
+
+.cart-item h3{
+
+    color:#d14b8f;
+
+    font-size:20px;
+
+    margin:0;
+
+}
+
+
+
+.cart-item p{
+
+    color:#555;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+}
+
+
+
+
+
+/* تعداد محصول */
+
+.quantity{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    background:#fff0f5;
+
+    padding:8px 15px;
+
+    border-radius:30px;
+
+}
+
+
+
+.quantity button{
+
+    width:35px;
+
+    height:35px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#d14b8f;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.quantity button:hover{
+
+    transform:scale(1.1);
+
+}
+
+
+
+.quantity span{
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    min-width:25px;
+
+    text-align:center;
+
+}
+
+
+
+
+/* دکمه حذف */
+
+.cart-item button:last-child{
+
+    background:#ff5c7a;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 18px;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.cart-item button:last-child:hover{
+
+    background:#e6395c;
+
+    transform:scale(1.05);
+
+}
+
+
+
+
+
+/* قیمت کل */
+
+#total-price{
+
+    text-align:center;
+
+    font-size:30px;
+
+    color:#d14b8f;
+
+    font-weight:bold;
+
+    margin-top:40px;
+
+}
+/* دکمه پرداخت نهایی */
+
+.checkout-btn{
+
+    display:block;
+
+    margin:40px auto;
+
+    width:250px;
+
+    padding:15px 30px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:linear-gradient(135deg,#d14b8f,#ff7eb3);
+
+    color:white;
+
+    font-size:18px;
+
+    font-family:"Vazirmatn",sans-serif;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 10px 25px rgba(209,75,143,.25);
+
+}
+
+
+
+.checkout-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 35px rgba(209,75,143,.35);
+
+}
+
+
+
+.checkout-btn:active{
+
+    transform:scale(.95);
+
+}
+.checkout-btn i{
+
+    margin-left:10px;
+
+    font-size:18px;
+
+}
+/* ===========================
+   Checkout
+=========================== */
+
+.checkout{
+
+    padding:80px 20px;
+
+    background:#fff6fa;
+
+    min-height:100vh;
+
+}
+
+
+.checkout-box{
+
+    max-width:700px;
+
+    margin:auto;
+
+    background:#fff;
+
+    border-radius:25px;
+
+    padding:40px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+
+.checkout-box h2{
+
+    text-align:center;
+
+    color:#d14b8f;
+
+    font-size:34px;
+
+    margin-bottom:15px;
+
+}
+
+
+.checkout-box h2 i{
+
+    margin-left:10px;
+
+}
+
+
+.checkout-text{
+
+    text-align:center;
+
+    color:#777;
+
+    margin-bottom:35px;
+
+    font-size:17px;
+
+}
+
+
+.input-box{
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin-bottom:22px;
+
+}
+
+
+.input-box label{
+
+    margin-bottom:8px;
+
+    font-weight:bold;
+
+    color:#444;
+
+}
+
+
+.input-box input,
+.input-box textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    border:1px solid #ddd;
+
+    border-radius:15px;
+
+    font-family:inherit;
+
+    font-size:16px;
+
+    transition:.3s;
+
+    outline:none;
+
+}
+
+
+.input-box input:focus,
+.input-box textarea:focus{
+
+    border-color:#d14b8f;
+
+    box-shadow:0 0 10px rgba(209,75,143,.2);
+
+}
+
+
+textarea{
+
+    resize:none;
+
+}
+
+
+.payment-method{
+
+    margin-top:30px;
+
+}
+
+
+.payment-method h3{
+
+    margin-bottom:15px;
+
+    color:#444;
+
+}
+
+
+.payment-method label{
+
+    display:block;
+
+    margin-bottom:12px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+}
+
+
+.checkout-total{
+
+    margin:35px 0;
+
+    text-align:center;
+
+    background:#fff0f6;
+
+    padding:18px;
+
+    border-radius:15px;
+
+}
+
+
+.checkout-total h3{
+
+    color:#d14b8f;
+
+    font-size:28px;
+
+}
+
+
+.checkout-btn{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#d14b8f;
+
+    color:#fff;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+.checkout-btn:hover{
+
+    background:#b93c7a;
+
+    transform:translateY(-3px);
+
+}
+
+
+.checkout-btn i{
+
+    margin-left:10px;
+
+}
+
+
+
+/* =========================
+   Checkout Toast
+========================= */
+
+.checkout-toast{
+
+    position:fixed;
+
+    bottom:30px;
+
+    right:30px;
+
+    background:#d14b8f;
+
+    color:white;
+
+    padding:15px 25px;
+
+    border-radius:15px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:16px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+
+    transform:translateY(100px);
+
+    opacity:0;
+
+    transition:.4s;
+
+    z-index:999;
+
+}
+
+
+.checkout-toast.show{
+
+    transform:translateY(0);
+
+    opacity:1;
+
+}
+
+
+.checkout-toast i{
+
+    font-size:22px;
+
+}
+
+
+
+.success-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#fff0f5,#ffd6e7);
+}
+
+
+.success-box{
+    width:450px;
+    background:white;
+    padding:45px 30px;
+    text-align:center;
+    border-radius:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+
+
+.success-box i{
+    font-size:70px;
+    color:#e83e8c;
+    margin-bottom:20px;
+}
+
+
+.success-box h1{
+    color:#d63384;
+    margin-bottom:15px;
+}
+
+
+.success-box p{
+    color:#777;
+    line-height:2;
+}
+
+
+.order-number{
+    margin:25px 0;
+    background:#fff0f5;
+    padding:15px;
+    border-radius:15px;
+    color:#555;
+}
+
+
+.order-number span{
+    color:#d63384;
+    font-weight:bold;
+}
+
+
+.success-btn{
+    display:inline-block;
+    background:#e83e8c;
+    color:white;
+    padding:14px 35px;
+    border-radius:30px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+
+.success-btn:hover{
+    background:#c72d74;
+}
+/* success page */
+
+.success-page{
+
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#fff0f5;
+    padding:20px;
+
+}
+
+
+.success-box{
+
+    background:white;
+    width:420px;
+    text-align:center;
+    padding:40px 30px;
+    border-radius:30px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+
+    animation:showBox 0.6s ease;
+
+}
+
+
+.success-icon{
+
+    width:90px;
+    height:90px;
+    margin:auto;
+
+    background:#d94f8a;
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:45px;
+
+    animation:pop 0.5s ease;
+
+}
+
+
+
+.success-box h1{
+
+    color:#d94f8a;
+    font-size:26px;
+    margin:25px 0 15px;
+
+}
+
+
+
+.success-box p{
+
+    color:#777;
+    line-height:2;
+    font-size:15px;
+
+}
+
+
+
+.order-number{
+
+    background:#fff0f5;
+    margin:25px 0;
+    padding:15px;
+    border-radius:15px;
+
+    color:#555;
+
+}
+
+
+
+.order-number span{
+
+    color:#d94f8a;
+    font-weight:bold;
+
+}
+
+
+
+.success-btn{
+
+    display:inline-block;
+
+    background:#d94f8a;
+    color:white;
+
+    padding:13px 35px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    transition:0.3s;
+
+}
+
+
+
+.success-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:#c83f78;
+
+}
+
+
+
+
+@keyframes pop{
+
+    from{
+
+        transform:scale(0);
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+
+@keyframes showBox{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+/* ===== tracking page ===== */
+
+.tracking-page{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#fff0f5;
+
+    padding:20px;
+
+}
+
+
+
+.tracking-box{
+
+    background:white;
+
+    width:420px;
+
+    text-align:center;
+
+    padding:40px 30px;
+
+    border-radius:30px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+
+    animation:trackingShow .6s ease;
+
+}
+
+
+
+.tracking-icon{
+
+    width:90px;
+    height:90px;
+
+    margin:auto;
+
+    background:#d94f8a;
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    font-size:40px;
+
+}
+
+
+
+.tracking-box h1{
+
+    color:#d94f8a;
+
+    margin:25px 0 10px;
+
+}
+
+
+
+.tracking-box p{
+
+    color:#777;
+
+}
+
+
+
+#tracking-number{
+
+    width:90%;
+
+    padding:14px;
+
+    margin:20px 0;
+
+    border:1px solid #ddd;
+
+    border-radius:15px;
+
+    outline:none;
+
+    font-family:inherit;
+
+    text-align:center;
+
+}
+
+
+
+#tracking-number:focus{
+
+    border-color:#d94f8a;
+
+}
+
+
+
+.tracking-box button{
+
+    width:90%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#d94f8a;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+
+
+.tracking-box button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+
+#tracking-result{
+
+    margin-top:25px;
+
+}
+
+
+
+.tracking-success{
+
+    background:#fff0f5;
+
+    padding:20px;
+
+    border-radius:20px;
+
+}
+
+
+
+.tracking-success i{
+
+    color:#d94f8a;
+
+    font-size:35px;
+
+}
+
+
+
+.tracking-success h3{
+
+    color:#d94f8a;
+
+}
+
+
+
+@keyframes trackingShow{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* =========================
+      RESPONSIVE
+========================= */
+
+/* ===== Header Upgrade Only ===== */
+
+#header{
+
+    position:sticky;
+    top:15px;
+    z-index:999;
+
+    backdrop-filter:blur(12px);
+
+    transition:.4s;
+
+}
+
+
+#header:hover{
+
+    box-shadow:0 15px 35px rgba(209,75,143,.15);
+
+}
+
+
+
+.logo-img{
+
+    transition:.4s;
+
+}
+
+
+.logo-img:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+
+/* افکت نرم برای منو */
+
+.items a{
+
+    transition:.35s;
+
+}
+
+
+.items a:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* =========================
+   Luxury Product Cards
+========================= */
+
+
+.card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.4s ease;
+
+}
+
+
+
+/* خط رنگی بالای کارت */
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        #ff7eb3,
+        #d14b8f
+    );
+
+    transform:scaleX(0);
+
+    transition:.4s;
+
+}
+
+
+
+.card:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+
+
+
+/* عکس محصول */
+
+.card img{
+
+    transition:.5s ease;
+
+}
+
+
+
+.card:hover img{
+
+    transform:scale(1.08) translateY(-5px);
+
+}
+
+
+
+
+/* عنوان محصول */
+
+.card h3{
+
+    transition:.3s;
+
+}
+
+
+
+.card:hover h3{
+
+    color:#d14b8f;
+
+}
+
+
+
+
+/* قیمت */
+
+.card span{
+
+    background:#fff0f5;
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+}
+
+
+
+
+/* دکمه خرید */
+
+.card button{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.card button::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(255,255,255,.25);
+
+    transition:.4s;
+
+}
+
+
+
+.card button:hover::before{
+
+    left:100%;
+
+}
+
+
+
+.card button:active{
+
+    transform:scale(.95);
+
+}
+
+/* =========================
+   Luxury Hero Upgrade
+========================= */
+
+
+.hero{
+
+    animation:heroEnter 1s ease;
+
+}
+
+
+/* ورود نرم */
+
+@keyframes heroEnter{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+/* عنوان */
+
+.hero-text h1{
+
+    background:linear-gradient(
+        135deg,
+        #d14b8f,
+        #8E3D63
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+
+
+
+/* تگ بالای عنوان */
+
+.tag{
+
+    box-shadow:0 10px 25px rgba(209,75,143,.15);
+
+    animation:tagFloat 3s infinite ease-in-out;
+
+}
+
+
+
+@keyframes tagFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-5px);
+
+    }
+
+}
+
+
+
+
+/* عکس Hero */
+
+.hero-img img{
+
+    animation:floatImage 4s infinite ease-in-out;
+
+}
+
+
+
+@keyframes floatImage{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+}
+
+
+
+
+/* دکمه ها */
+
+.btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.btn:hover{
+
+    transform:translateY(-5px) scale(1.03);
+
+}
+
+
+
+
+/* نور پشت عکس */
+
+.hero::after{
+
+    animation:glowMove 6s infinite alternate;
+
+}
+
+
+
+@keyframes glowMove{
+
+    from{
+
+        transform:translate(-30px,-50%);
+
+    }
+
+
+    to{
+
+        transform:translate(50px,-50%);
+
+    }
+
+}
+
+/* =========================
+   Luxury Cart Upgrade
+========================= */
+
+
+.cart-container{
+
+    max-width:950px;
+
+    margin:70px auto;
+
+}
+
+
+
+/* کارت محصول */
+
+.cart-item{
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:25px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+    animation:cartShow .5s ease;
+
+}
+
+
+
+.cart-item:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 20px 45px rgba(209,75,143,.18);
+
+}
+
+
+
+
+@keyframes cartShow{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+/* اسم محصول */
+
+
+.cart-item h3{
+
+    color:#8E3D63;
+
+    font-size:22px;
+
+}
+
+
+
+
+/* قیمت */
+
+
+.cart-item p{
+
+    color:#d14b8f;
+
+    font-weight:bold;
+
+}
+
+
+
+
+/* تعداد */
+
+
+.quantity{
+
+    background:#fff0f5;
+
+    border-radius:40px;
+
+    padding:8px 15px;
+
+}
+
+
+
+.quantity button{
+
+    background:#d14b8f;
+
+    transition:.3s;
+
+}
+
+
+
+.quantity button:hover{
+
+    transform:scale(1.15);
+
+}
+
+
+
+
+/* حذف */
+
+
+.cart-item button:last-child{
+
+    background:#ff6b8a;
+
+    border-radius:25px;
+
+    transition:.3s;
+
+}
+
+
+
+.cart-item button:last-child:hover{
+
+    background:#e84368;
+
+    transform:scale(1.05);
+
+}
+
+
+
+
+/* قیمت کل */
+
+
+#total-price{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:25px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+
+
+
+/* پرداخت */
+
+
+.checkout-btn{
+
+    background:linear-gradient(
+        135deg,
+        #d14b8f,
+        #ff7eb3
+    );
+
+    border-radius:40px;
+
+    box-shadow:0 10px 25px rgba(209,75,143,.3);
+
+}
+
+
+
+.checkout-btn:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/* سبد خالی */
+
+.empty-cart{
+
+    text-align:center;
+
+    background:white;
+
+    padding:50px;
+
+    border-radius:30px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+
+
+.empty-cart i{
+
+    font-size:70px;
+
+    color:#d14b8f;
+
+    margin-bottom:20px;
+
+}
+
+/* =========================
+   Luxury Checkout Upgrade
+========================= */
+
+
+.checkout{
+
+    background:linear-gradient(
+        135deg,
+        #fff0f5,
+        #fff8fb
+    );
+
+}
+
+
+
+/* باکس پرداخت */
+
+.checkout-box{
+
+    position:relative;
+
+    overflow:hidden;
+
+    animation:checkoutShow .7s ease;
+
+}
+
+
+
+@keyframes checkoutShow{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* نوار بالای فرم */
+
+
+.checkout-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:6px;
+
+    background:linear-gradient(
+        90deg,
+        #ff7eb3,
+        #d14b8f
+    );
+
+}
+
+
+
+
+/* عنوان */
+
+
+.checkout-box h2{
+
+    font-family:"Estedad";
+
+}
+
+
+
+
+/* ورودی ها */
+
+
+.input-box input,
+.input-box textarea{
+
+    background:#fff;
+
+    border:2px solid #f5d8e5;
+
+    transition:.3s;
+
+}
+
+
+
+.input-box input:hover,
+.input-box textarea:hover{
+
+    border-color:#e88ca8;
+
+}
+
+
+
+.input-box input:focus,
+.input-box textarea:focus{
+
+    border-color:#d14b8f;
+
+    box-shadow:
+    0 0 15px rgba(209,75,143,.2);
+
+}
+
+
+
+
+/* مبلغ نهایی */
+
+
+.checkout-total{
+
+    border:1px solid #ffd1e2;
+
+    animation:pulsePrice 2s infinite;
+
+}
+
+
+
+@keyframes pulsePrice{
+
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+
+    50%{
+
+        transform:scale(1.03);
+
+    }
+
+}
+
+
+
+
+/* روش پرداخت */
+
+
+.payment-method{
+
+    background:#fff8fb;
+
+    padding:20px;
+
+    border-radius:20px;
+
+}
+
+
+
+
+.payment-method label{
+
+    background:white;
+
+    padding:12px;
+
+    border-radius:15px;
+
+    transition:.3s;
+
+}
+
+
+
+.payment-method label:hover{
+
+    transform:translateX(-5px);
+
+    box-shadow:0 8px 20px rgba(209,75,143,.1);
+
+}
+
+
+
+
+/* دکمه ثبت سفارش */
+
+
+.checkout-btn{
+
+    background:linear-gradient(
+        135deg,
+        #d14b8f,
+        #ff7eb3
+    );
+
+    box-shadow:
+    0 15px 30px rgba(209,75,143,.25);
+
+}
+
+
+
+.checkout-btn:hover{
+
+    transform:translateY(-5px) scale(1.02);
+
+}
+
+/* =========================
+   Luxury Success Page
+========================= */
+
+
+.success-page{
+
+    background:
+    linear-gradient(
+        135deg,
+        #fff0f5,
+        #ffd9e8
+    );
+
+}
+
+
+
+
+.success-box{
+
+    position:relative;
+
+    overflow:hidden;
+
+    animation:successShow .8s ease;
+
+}
+
+
+
+
+.success-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:7px;
+
+    background:linear-gradient(
+        90deg,
+        #ff7eb3,
+        #d14b8f
+    );
+
+}
+
+
+
+
+@keyframes successShow{
+
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px) scale(.95);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0) scale(1);
+
+    }
+
+}
+
+
+
+
+/* آیکن موفقیت */
+
+
+.success-icon{
+
+    box-shadow:
+
+    0 15px 30px rgba(209,75,143,.3);
+
+}
+
+
+
+.success-icon i{
+
+    animation:checkPop .6s ease;
+
+}
+
+
+
+
+@keyframes checkPop{
+
+
+    from{
+
+        transform:scale(0);
+
+    }
+
+
+    to{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+
+
+/* عنوان */
+
+
+.success-box h1{
+
+    font-family:"Estedad";
+
+}
+
+
+
+
+/* متن */
+
+
+.success-box p{
+
+    line-height:2.2;
+
+}
+
+
+
+
+/* شماره سفارش */
+
+
+.order-number{
+
+    border:1px dashed #e88ca8;
+
+    transition:.3s;
+
+}
+
+
+
+.order-number:hover{
+
+    transform:scale(1.03);
+
+}
+
+
+
+
+.order-number span{
+
+    font-size:20px;
+
+}
+
+
+
+
+/* دکمه */
+
+
+.success-btn{
+
+    background:linear-gradient(
+        135deg,
+        #d14b8f,
+        #ff7eb3
+    );
+
+    box-shadow:
+
+    0 10px 25px rgba(209,75,143,.3);
+
+}
+
+
+
+.success-btn:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+/* =========================
+   Luxury Tracking Page
+========================= */
+
+
+.tracking-page{
+
+    background:
+    linear-gradient(
+        135deg,
+        #fff0f5,
+        #ffd9e8
+    );
+
+}
+
+
+
+.tracking-box{
+
+    position:relative;
+
+    overflow:hidden;
+
+    animation:trackingShow .8s ease;
+
+}
+
+
+
+.tracking-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:7px;
+
+    background:linear-gradient(
+        90deg,
+        #ff7eb3,
+        #d14b8f
+    );
+
+}
+
+
+
+
+/* آیکن */
+
+.tracking-icon{
+
+    box-shadow:
+
+    0 15px 30px rgba(209,75,143,.3);
+
+}
+
+
+
+
+/* عنوان */
+
+.tracking-box h1{
+
+    font-family:"Estedad";
+
+}
+
+
+
+
+/* ورودی */
+
+
+#tracking-number{
+
+    border:2px solid #f5d8e5;
+
+    transition:.3s;
+
+}
+
+
+
+#tracking-number:hover{
+
+    border-color:#e88ca8;
+
+}
+
+
+
+#tracking-number:focus{
+
+    border-color:#d14b8f;
+
+    box-shadow:
+
+    0 0 15px rgba(209,75,143,.2);
+
+}
+
+
+
+
+/* دکمه */
+
+
+.tracking-box button{
+
+    background:linear-gradient(
+        135deg,
+        #d14b8f,
+        #ff7eb3
+    );
+
+    box-shadow:
+
+    0 10px 25px rgba(209,75,143,.25);
+
+}
+
+
+
+.tracking-box button:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+
+
+/* نتیجه پیگیری */
+
+
+.tracking-success{
+
+    border:1px dashed #e88ca8;
+
+    animation:resultShow .5s ease;
+
+}
+
+
+
+
+.tracking-success i{
+
+    animation:iconMove 1.5s infinite;
+
+}
+
+
+
+
+
+@keyframes resultShow{
+
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+
+@keyframes iconMove{
+
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-5px);
+
+    }
+
+}
+
+
+
+
+@media(max-width:600px){
+
+
+.tracking-box{
+
+    width:90%;
+
+    padding:30px 20px;
+
+}
+
+
+}
+
+/* موبایل */
+
+
+@media(max-width:600px){
+
+
+.success-box{
+
+    width:90%;
+
+    padding:35px 20px;
+
+}
+
+
+.success-box h1{
+
+    font-size:23px;
+
+}
+
+
+}
+
+/* موبایل */
+
+
+@media(max-width:768px){
+
+
+    .checkout-box{
+
+        padding:25px 18px;
+
+    }
+
+
+    .checkout-box h2{
+
+        font-size:25px;
+
+    }
+
+
+}
+
+/* تبلت */
+@media(max-width:1000px){
+
+    .shop-cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+
+    .hero{
+        padding:50px 40px;
+    }
+
+
+    .hero-text h1{
+        font-size:55px;
+    }
+
+
+    .items{
+        gap:20px;
+    }
+
+
+    .items a{
+        font-size:15px;
+    }
+
+}
+
+
+
+/* موبایل */
+@media(max-width:768px){
+
+
+/* HEADER */
+
+#header{
+
+    margin:10px;
+
+    padding:15px 20px;
+
+    position:relative;
+
+}
+
+
+.logo-img{
+
+    width:75px;
+
+}
+
+
+.brand{
+
+    font-size:22px;
+
+}
+
+
+
+.menu-btn{
+
+    display:block;
+
+}
+
+
+
+/* منوی موبایل */
+
+.nav-items{
+
+    display:none;
+
+    position:absolute;
+
+    top:90px;
+
+    right:10px;
+
+    left:10px;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:25px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+    z-index:100;
+
+}
+
+
+
+.nav-items.active{
+
+    display:block;
+
+}
+
+
+
+.items{
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+
+
+.items a{
+
+    width:180px;
+
+    text-align:center;
+
+    display:block;
+
+}
+
+
+
+
+/* HERO */
+
+
+.hero{
+
+    width:auto;
+    flex-direction:column;
+
+    padding:35px 15px;
+
+    margin:10px;
+
+    text-align:center;
+
+    overflow:hidden;
+}
+
+.hero::after{
+
+    width:250px;
+    height:250px;
+    left:-80px;
+    filter:blur(80px);
+
+}
+
+.hero-text{
+
+    width:100%;
+    max-width:100%;
+}
+
+
+.hero-text h1{
+
+    font-size:35px;
+
+    line-height:55px;
+
+    word-wrap:break-word;
+}
+
+
+.hero-text p{
+
+    font-size:16px;
+
+    line-height:30px;
+}
+
+
+.hero-buttons{
+
+    justify-content:center;
+
+    flex-direction:column;
+
+}
+
+
+.hero .btn{
+    display:block;
+    margin:15px auto;
+    max-width:200px;
+}
+
+.hero-img{
+
+    width:100%;
+
+    max-width:100%;
+
+    margin-top:30px;
+
+}
+
+
+.hero-img img{
+
+    width:100%;
+
+    max-width:320px;
+
+    height:auto;
+}
+
+
+
+
+/* محصولات */
+
+
+.products{
+
+    padding:60px 20px;
+
+}
+
+
+
+.products h2{
+
+    font-size:32px;
+
+}
+
+
+
+.cards{
+
+     flex-direction: row;
+}
+
+
+
+.card{
+
+    width:280px;
+
+}
+
+
+
+.card img{
+
+    height:200px;
+
+}
+
+
+
+
+/* چرا ونوم */
+
+
+.why-venom{
+
+    padding:70px 20px;
+
+}
+
+
+
+.why-venom h2{
+
+    font-size:32px;
+
+}
+
+
+
+.why-card{
+width: 100%;
+
+}
+
+
+
+
+/* نظرات */
+
+
+.reviews{
+
+    padding:70px 20px;
+
+}
+
+
+
+.reviews h2{
+
+    font-size:32px;
+
+}
+
+
+
+.review-card{
+
+width: 100%;
+
+}
+
+
+
+
+/* فوتر */
+
+
+.footer{
+
+    padding:50px 20px;
+
+    text-align:center;
+
+}
+
+
+
+.footer-content{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+
+
+.footer-brand{
+
+    width:100%;
+
+}
+
+
+
+
+/* سرچ و هدر راست */
+
+
+.header-right{
+
+    width:100%;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+
+
+.search-box{
+
+    width:100%;
+
+}
+
+
+
+
+/* سبد خرید */
+
+
+.cart-container{
+
+    width:95%;
+
+}
+
+
+
+.cart-item{
+
+    flex-direction:column;
+
+    text-align:center;
+
+    gap:20px;
+
+}
+
+
+
+.quantity{
+
+    justify-content:center;
+
+}
+
+
+
+#total-price{
+
+    font-size:25px;
+
+}
+
+
+
+.checkout-btn{
+
+    width:90%;
+
+    font-size:16px;
+
+}
+
+
+
+
+/* پرداخت */
+
+
+.checkout{
+
+    padding:40px 15px;
+
+}
+
+
+
+.checkout-box{
+
+    padding:25px;
+
+}
+
+
+
+.checkout-box h2{
+
+    font-size:28px;
+
+}
+
+
+
+
+/* پیام پرداخت */
+
+
+.checkout-toast{
+
+    right:15px;
+
+    left:15px;
+
+    bottom:20px;
+
+    justify-content:center;
+
+}
+
+
+
+
+/* موفقیت و پیگیری */
+
+
+.success-box,
+.tracking-box{
+
+    width:90%;
+
+    padding:30px 20px;
+
+}
+
+
+
+.success-box h1,
+.tracking-box h1{
+
+    font-size:24px;
+
+}
+
+
+
+}
+
+
+
+/* موبایل کوچک */
+
+@media(max-width:600px){
+
+
+.shop-cards{
+    grid-template-columns:repeat(2, 1fr);
+    gap:8px;
+}
+
+
+.shop h1{
+    font-size:32px;
+}
+
+
+.card{
+    width:100%;
+}
+
+
+.hero-text h1{
+    font-size:35px;
+}
+
+
+
+}
+/* =========================
+   Product Badge
+========================= */
+
+
+.card{
+
+    position:relative;
+
+}
+
+
+
+.product-badge{
+
+    position:absolute;
+
+    top:15px;
+
+    right:15px;
+
+    background:linear-gradient(
+        135deg,
+        #ff7eb3,
+        #d14b8f
+    );
+
+    color:white;
+
+    padding:7px 15px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    z-index:2;
+
+    box-shadow:0 8px 20px rgba(209,75,143,.25);
+
+}
+
+
+
+/* ظاهر بهتر صفحه فروشگاه */
+
+.shop{
+
+    background:linear-gradient(
+        180deg,
+        #fff8fb,
+        #fff0f5
+    );
+
+}
+
+
+
+.shop .card{
+
+    animation:shopCard .7s ease forwards;
+
+}
+
+
+
+@keyframes shopCard{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* فاصله بهتر دکمه */
+
+.shop .card button{
+
+    margin-top:15px;
+
+}
+/* =====================
+   Categories Page
+===================== */
+
+
+.categories-page{
+
+    padding:80px 8%;
+
+    text-align:center;
+
+    background:#fff8fb;
+
+    min-height:100vh;
+
+}
+
+
+
+.categories-page h1{
+
+    font-size:45px;
+
+    color:#8E3D63;
+
+    margin-bottom:20px;
+
+    font-family:"Estedad";
+
+}
+
+
+
+.categories-page>p{
+
+    color:#777;
+
+    font-size:18px;
+
+    margin-bottom:60px;
+
+}
+
+
+
+
+
+.category-boxes{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+
+
+.category-box{
+
+    width:260px;
+
+    background:white;
+
+    padding:35px 25px;
+
+    border-radius:30px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+}
+
+
+
+
+
+.category-box:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 20px 40px rgba(209,75,143,.25);
+
+}
+
+
+
+
+
+.category-box i{
+
+    font-size:45px;
+
+    color:#d14b8f;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+.category-box h3{
+
+    font-size:25px;
+
+    color:#333;
+
+    margin-bottom:15px;
+
+}
+
+
+
+
+
+.category-box p{
+
+    color:#777;
+
+    line-height:30px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+
+.category-box a{
+
+    display:inline-block;
+
+    background:linear-gradient(
+        135deg,
+        #d14b8f,
+        #ff7eb3
+    );
+
+    color:white;
+
+    padding:12px 25px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+
+
+
+
+.category-box a:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 20px rgba(209,75,143,.3);
+
+}
+
+
+
+
+
+@media(max-width:600px){
+
+
+    .categories-page h1{
+
+        font-size:32px;
+
+    }
+
+
+    .category-box{
+
+        width:80%;
+
+    }
+
+
+}
+/* =====================
+   Contact Page
+===================== */
+
+
+.contact-page{
+
+    padding:80px 8%;
+
+    text-align:center;
+
+    background:#fff8fb;
+
+    min-height:100vh;
+
+}
+
+
+
+.contact-page h1{
+
+    color:#8E3D63;
+
+    font-size:45px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.contact-page>p{
+
+    color:#777;
+
+    font-size:18px;
+
+    margin-bottom:60px;
+
+}
+
+
+
+
+.contact-boxes{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+
+.contact-box{
+
+    width:250px;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:30px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+
+
+.contact-box:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+.contact-box i{
+
+    font-size:45px;
+
+    color:#d14b8f;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.contact-box h3{
+
+    color:#333;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.contact-box p{
+
+    color:#777;
+
+}
+
+
+
+
+
+.contact-form{
+
+    max-width:600px;
+
+    margin:70px auto 0;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:30px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+
+
+.contact-form h2{
+
+    color:#d14b8f;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.contact-form input,
+.contact-form textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-bottom:15px;
+
+    border:1px solid #ddd;
+
+    border-radius:15px;
+
+    font-family:inherit;
+
+    outline:none;
+
+}
+
+
+
+.contact-form textarea{
+
+    height:120px;
+
+    resize:none;
+
+}
+
+
+
+.contact-form button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#d14b8f;
+
+    color:white;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+}
+
+
+
+.contact-form button:hover{
+
+    background:#b13a75;
+
+}
+
+
+
+@media(max-width:600px){
+
+
+.contact-page h1{
+
+    font-size:32px;
+
+}
+
+
+.contact-box{
+
+    width:80%;
+
+}
+
+
+}
+/* چیدمان کارت ها در موبایل */
+
+@media(max-width:600px){
+
+    .cards,
+    .why-cards,
+    .review-cards,
+    .about-boxes,
+    .category-boxes,
+    .contact-boxes{
+
+        display:grid;
+        grid-template-columns:repeat(4,1fr);
+        gap:12px;
+
+    }
+
+
+    .card,
+    .why-card,
+    .review-card,
+    .about-box,
+    .category-box,
+    .contact-box{
+
+        width:100%;
+        padding:15px;
+
+    }
+
+
+    .card h3,
+    .why-card h3,
+    .review-card h3{
+
+        font-size:16px;
+
+    }
+
+
+    .card p,
+    .why-card p,
+    .review-card p{
+
+        font-size:13px;
+        line-height:25px;
+
+    }
+
+
+    .card img{
+
+        height:130px;
+
+    }
+
+
+
+}
